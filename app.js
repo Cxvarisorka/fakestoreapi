@@ -4,6 +4,7 @@ import bodyParser from 'body-parser';
 
 // Routers
 import productsRoutes from './routes/products.routes.js';
+import adminsRoutes from './routes/admins.route.js';
 
 const app = express();
 
@@ -13,6 +14,7 @@ app.use(bodyParser.json());
 
 // Routers middleware
 app.use('/products', productsRoutes);
+app.use("/admin", adminsRoutes);
 
 
 app.listen(3000, () => {
